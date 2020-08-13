@@ -12,6 +12,9 @@ import org.junit.Assert.*
 class ExampleUnitTest {
     @Test
     fun addition_isCorrect() {
-        assertEquals(4, 2 + 2)
+        val timeDuration = 1
+        val activateTime = System.currentTimeMillis()
+        val expirationTime = activateTime + timeDuration * 1000 * 3600
+        assertEquals(System.currentTimeMillis() + 3600000, expirationTime)
     }
 }
