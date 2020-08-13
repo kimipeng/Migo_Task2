@@ -39,4 +39,8 @@ class PassAdapter(private val clickListener: (Pass, TextView) -> Unit): PagedLis
            holder.bindData(pass = it, clickListener = clickListener)
        }
     }
+
+    fun getPass(position: Int): Pass?{
+        return getItem(position)
+    }
 }

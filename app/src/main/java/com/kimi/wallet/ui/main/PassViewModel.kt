@@ -12,4 +12,9 @@ import com.kimi.wallet.data.Pass
 class PassViewModel(private val dataRepository: DataRepository): ViewModel() {
 
     val allPass: LiveData<PagedList<Pass>> = dataRepository.getAllPass()
+
+    fun remove(pass: Pass) {
+        dataRepository.delete(pass)
+    }
+
 }
