@@ -1,4 +1,4 @@
-package com.kimi.mediapass
+package com.kimi.wallet
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
