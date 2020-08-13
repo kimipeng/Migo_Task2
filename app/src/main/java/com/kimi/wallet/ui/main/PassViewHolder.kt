@@ -29,9 +29,15 @@ class PassViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
         purchaseTime.text = "Purchase Time: \n${simpleDate.format(pass.purchaseTime)}"
 
         status.text = if (pass.isActivate){
-            "In Activitate"
+
+            if (System.currentTimeMillis() > pass.expirationTime) {
+                "Expirated"
+            } else {
+                "In Activate"
+            }
+
         } else {
-            "Not yet Activitate"
+            "Not yet Activate"
         }
 
     }

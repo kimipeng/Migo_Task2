@@ -8,7 +8,7 @@
 
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/tv_PassType"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
@@ -19,4 +19,73 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:transitionName="item_transition"/>
+
+    <TextView
+        android:id="@+id/tv_purchaseTime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="Purchase Time"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_PassType" />
+
+    <TextView
+        android:id="@+id/tv_duration"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_purchaseTime"
+        app:layout_constraintStart_toStartOf="@+id/tv_purchaseTime"
+        app:layout_constraintTop_toBottomOf="@+id/tv_purchaseTime"
+        android:text="Duration Time"/>
+
+    <TextView
+        android:id="@+id/tv_status"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Status"
+        android:textColor="#F48FB1"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/tv_duration"
+        app:layout_constraintStart_toStartOf="@+id/tv_duration"
+        app:layout_constraintTop_toBottomOf="@+id/tv_duration" />
+
+    <TextView
+        android:id="@+id/tv_activation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Activation Time"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_status"
+        app:layout_constraintStart_toStartOf="@+id/tv_status"
+        app:layout_constraintTop_toBottomOf="@+id/tv_status" />
+
+    <TextView
+        android:id="@+id/tv_expiration"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Expiration Time"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_activation"
+        app:layout_constraintStart_toStartOf="@+id/tv_activation"
+        app:layout_constraintTop_toBottomOf="@+id/tv_activation" />
+
+    <Button
+        android:id="@+id/activate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:text="Activate"
+        app:layout_constraintEnd_toEndOf="@+id/tv_expiration"
+        app:layout_constraintStart_toStartOf="@+id/tv_expiration"
+        app:layout_constraintTop_toBottomOf="@+id/tv_expiration" />
 </androidx.constraintlayout.widget.ConstraintLayout>
