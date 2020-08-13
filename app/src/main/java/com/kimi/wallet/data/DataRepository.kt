@@ -49,5 +49,11 @@ class DataRepository(private val passDao: PassDao) {
         }
     }
 
+    fun update(pass: Pass) {
+        executeThread {
+            passDao.update(pass)
+        }
+    }
+
 
 }

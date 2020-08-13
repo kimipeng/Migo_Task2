@@ -9,8 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".add.AddPassActivity"></activity>
-        <activity android:name=".main.MainActivity">
+        <activity android:name=".ui.detail.DetailActivity"></activity>
+        <activity android:name=".ui.add.AddPassActivity" />
+        <activity android:name=".ui.main.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

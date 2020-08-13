@@ -1,4 +1,4 @@
-package com.kimi.wallet.add
+package com.kimi.wallet.ui.add
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -27,7 +27,8 @@ class AddPassActivity : AppCompatActivity() {
 
 
         // Init ViewModel
-        addPassViewModel = ViewModelProvider(this, DataViewModelFactory(this)).get(AddPassViewModel::class.java)
+        addPassViewModel = ViewModelProvider(this, DataViewModelFactory(this)).get(
+            AddPassViewModel::class.java)
         addPassViewModel.saved.observe(this, Observer {
             it.getContentIfNotHandled()?.let { savefinish ->
                 if (savefinish) {

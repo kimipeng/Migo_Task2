@@ -1,4 +1,4 @@
-package com.kimi.wallet.add
+package com.kimi.wallet.ui.add
 
 
 import androidx.lifecycle.LiveData
@@ -27,12 +27,12 @@ class AddPassViewModel(private val dataRepository: DataRepository) : ViewModel()
         }
 
         val pass = Pass(
-            status = 0,
             purchaseTime = System.currentTimeMillis(),
             activationTime = 0,
             expirationTime = 0,
             passType = passType,
-            passDuration = passDuration
+            passDuration = passDuration,
+            isActivate = false
         )
 
         dataRepository.save(pass)
