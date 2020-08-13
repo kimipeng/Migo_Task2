@@ -7,6 +7,7 @@ import androidx.room.*
 /**
  * Created by Kimi.Peng on 2020/8/13.
  */
+@Dao
 interface PassDao {
 
     @Query("SELECT * FROM pass")

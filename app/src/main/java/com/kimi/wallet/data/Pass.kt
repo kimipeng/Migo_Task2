@@ -11,9 +11,10 @@ import androidx.room.PrimaryKey
 data class Pass(
     @PrimaryKey(autoGenerate = true)
     val id: Long = 0,
-    @ColumnInfo val status: String,
+    @ColumnInfo val status: Int,
     @ColumnInfo val purchaseTime: Long,
     @ColumnInfo val activationTime: Long,
     @ColumnInfo val expirationTime: Long,
-    @ColumnInfo val passType: Int
+    @ColumnInfo val passType: String,
+    @ColumnInfo val passDuration: Int
 )

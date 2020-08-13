@@ -43,7 +43,7 @@ class DataRepository(private val passDao: PassDao) {
         }
     }
 
-    fun insert(pass: Pass) {
+    fun save(pass: Pass) {
         executeThread {
             passDao.insert(pass)
         }
